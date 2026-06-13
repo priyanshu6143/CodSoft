@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priyanshu | Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0B1120;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(11,17,32,0.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:#3B82F6;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#60A5FA;
+}
+
+section{
+    padding:100px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:50px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:
+    radial-gradient(circle at 20% 20%, rgba(59,130,246,.35), transparent 30%),
+    radial-gradient(circle at 80% 80%, rgba(96,165,250,.25), transparent 25%),
+    linear-gradient(135deg,#020617,#0F172A,#0B1120);
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.hero-text h3{
+    color:#60A5FA;
+    margin-bottom:10px;
+    font-size:1.5rem;
+}
+
+.hero-text h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:1.2rem;
+    line-height:1.8;
+    color:#CBD5E1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    margin-right:15px;
+    padding:14px 32px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.3s;
+    font-weight:600;
+}
+
+.btn-primary{
+    background:#3B82F6;
+    color:white;
+}
+
+.btn-secondary{
+    border:2px solid #3B82F6;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.hero-img img{
+    width:380px;
+    border-radius:25px;
+    border:5px solid #3B82F6;
+    box-shadow:0 0 40px rgba(59,130,246,.5);
+}
+
+/* GLASS CARD */
+
+.card{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:35px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:20px;
+}
+
+.about p{
+    color:#CBD5E1;
+    line-height:1.9;
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.skill-card{
+    padding:18px 32px;
+    border-radius:50px;
+
+    background:rgba(59,130,246,.12);
+
+    border:1px solid rgba(59,130,246,.3);
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-5px);
+
+    background:#3B82F6;
+
+    color:white;
+
+    box-shadow:0 0 20px rgba(59,130,246,.5);
+}
+
+
+/* EDUCATION */
+
+.education-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.edu-card{
+    background:rgba(255,255,255,.05);
+    border-radius:20px;
+    padding:30px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.edu-card h3{
+    color:#60A5FA;
+    margin-bottom:15px;
+}
+
+/* EXPERIENCE */
+
+.timeline{
+    position:relative;
+    max-width:850px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:20px;
+    top:0;
+    width:3px;
+    height:100%;
+    background:#3B82F6;
+}
+
+.timeline-item{
+    margin-left:60px;
+    margin-bottom:35px;
+    background:rgba(255,255,255,.05);
+    padding:25px;
+    border-radius:15px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:'';
+    position:absolute;
+    left:-50px;
+    top:25px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#3B82F6;
+    box-shadow:0 0 20px #3B82F6;
+}
+
+.timeline-item h3{
+    color:#60A5FA;
+}
+
+/* RESUME */
+
+.resume{
+    text-align:center;
+}
+
+.resume a{
+    background:#3B82F6;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:600;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    margin:15px 0;
+    font-size:1.1rem;
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+    color:#94A3B8;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding-top:150px;
+}
+
+.hero-img{
+    margin-top:40px;
+}
+
+.hero-img img{
+    width:280px;
+}
+
+.hero-text h1{
+    font-size:2.8rem;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Priyanshu<span>.</span></div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section class="hero" id="home">
+
+    <div class="hero-text">
+        <h3>Hello, I'm</h3>
+        <h1>Priyanshu</h1>
+
+        <p>
+            Computer Science Engineering Student, Web Developer and Tech Enthusiast passionate about building responsive websites and learning modern technologies.
+        </p>
+
+        <a href="resume.pdf" class="btn btn-primary" download>Download Resume</a>
+
+        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+    </div>
+
+    <div class="hero-img">
+        <img src="img.jpeg" alt="Priyanshu Bharara">
+    </div>
+
+</section>
+
+<section id="about">
+    <h2 class="title">About Me</h2>
+
+    <div class="card about">
+
+        <img src="img.jpeg" alt="Profile">
+
+        <div>
+            <p>
+                Hello! I'm Priyanshu, a Computer Science Engineering student with a strong interest in Web Development, Software Development and Technology.
+            </p>
+
+            <br>
+
+            <p>
+                I enjoy creating responsive websites, solving coding challenges, working in teams and constantly learning new technologies. My goal is to build impactful digital solutions while continuously improving my technical and professional skills.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills">
+
+    <h2 class="title">My Skills</h2>
+
+    <div class="skills-grid">
+
+        <div class="skill-card">HTML</div>
+        <div class="skill-card">CSS</div>
+        <div class="skill-card">C</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">Java</div>
+        <div class="skill-card">Responsive Design</div>
+        <div class="skill-card">Problem Solving</div>
+        <div class="skill-card">Teamwork</div>
+        <div class="skill-card">Leadership</div>
+        <div class="skill-card">Communication</div>
+
+    </div>
+
+</section>
+
+<section id="education">
+
+    <h2 class="title">Education</h2>
+
+    <div class="education-grid">
+
+        <div class="edu-card">
+            <h3>B.Tech - Computer Science Engineering</h3>
+            <p>Maharishi Markandeshwar (Deemed to be University)</p>
+            <p>2023 - 2027</p>
+        </div>
+
+        <div class="edu-card">
+            <h3>Class XII</h3>
+            <p>Sant Gyaneshwar Model School, Delhi</p>
+        </div>
+
+        <div class="edu-card">
+            <h3>Class X</h3>
+            <p>D.A.V. Public School, Kurukshetra</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="experience">
+
+    <h2 class="title">Experience</h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <h3>AI Web Development Intern</h3>
+            <p>InAmigos Foundation</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Web Development Intern</h3>
+            <p>CodSoft</p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Core Team Member</h3>
+            <p>Proto X Vision</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="resume">
+
+    <h2 class="title">Resume</h2>
+
+    <a href="resume.pdf" download>Download My Resume</a>
+
+</section>
+
+<section id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <div class="card contact">
+        <p>📧 your-priyanshu6143@gmail.com</p>
+        <p>💼 LinkedIn: linkedin.com/in/Priyanshu Bharara</p>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Priyanshu | All Rights Reserved
+</footer>
+
+</body>
+</html>
