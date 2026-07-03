@@ -1,0 +1,262 @@
+/* ==========================================================================
+   BASIC RESET & BASE STYLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fcfcfc;
+    color: #2c3e50;            
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   NAVIGATION HEADER
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #3498db; 
+}
+
+.nav-links a {
+    color: #555555;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    background-color: #f4f9f4; /* Light Pastel Mint Green background */
+    transition: background-color 0.4s ease;
+}
+
+/* Color shift when user hovers directly over the hero panel */
+.hero-section:hover {
+    background-color: #eaf2ea; 
+}
+
+.hero-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.hero-image-container {
+    flex: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   DESTINATIONS GALLERY (Two Row Layout)
+   ========================================================================== */
+.section {
+    padding: 80px 8%;
+    background-color: #ffffff;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* Creates clean space between row 1 and row 2 */
+.space-top {
+    margin-top: 25px;
+}
+
+.trip-card {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eef2f5;
+    transition: all 0.3s ease; /* Smooth hover transition hook */
+}
+
+/* Card Hover effect: Adds a soft pastel tint and moves up slightly */
+.trip-card:hover {
+    transform: translateY(-5px);
+    background-color: #ebf5fb; /* Very soft light ice blue tint */
+    border-color: #d4e6f1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.card-body p {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   SERVICES SECTION
+   ========================================================================== */
+.services-section {
+    padding: 80px 8%;
+    background-color: #fdf6f0; /* Light Pastel Warm Peach background */
+    transition: background-color 0.4s ease;
+}
+
+/* Changes section block color softly on hover */
+.services-section:hover {
+    background-color: #fbeee2;
+}
+
+.services-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.service-item {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Individual box hover color effect */
+.service-item:hover {
+    background-color: #fffdfb;
+    border-color: #f5b041; /* Soft warm sandy border accent */
+}
+
+.service-item h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.service-item p {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   FOOTER SECTION
+   ========================================================================== */
+.footer {
+    padding: 60px 8%;
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer h2 {
+    margin-bottom: 15px;
+}
+
+.footer p {
+    color: #bdc3c7;
+    margin-bottom: 30px;
+}
+
+.footer-links {
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVENESS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+    .card-row, .services-row {
+        flex-direction: column;
+    }
+    .space-top {
+        margin-top: 0; /* Resets row gap on single stack columns */
+    }
+    .trip-card {
+        margin-bottom: 25px;
+    }
+}
